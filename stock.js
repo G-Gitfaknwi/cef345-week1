@@ -5,7 +5,7 @@ const products = [
 { name: "Maggi cubes (packet)", qty: 30, minQty: 10, buy: 900, sell: 1000
 },
 ];
-const lowStock = products.filter((p) => p.qty <= p.minQty);
+const lowStock = products.filter((p) => p.qty < p.minQty);
 console.log("Products to restock:");
 for (const p of lowStock) {
 console.log(`- ${p.name}: ${p.qty} left`);
