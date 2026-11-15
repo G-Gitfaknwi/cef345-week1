@@ -25,3 +25,13 @@ for (const p of products) {
   }
 }
 console.log(`Highest profit per unit: ${best.name} (${profitPerUnit(best)} XAF)`);
+
+function getOutOfStock(items) {
+  return items.filter((p) => p.qty === 0);
+}
+
+const outOfStock = getOutOfStock(products);
+console.log("Out of stock products:");
+for (const p of outOfStock) {
+  console.log(`- ${p.name}`);
+}
