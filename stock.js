@@ -13,6 +13,7 @@ console.log(`- ${p.name}: ${p.qty} left`);
 const stockValue = products.reduce((total, p) => total + p.qty * p.buy, 0);
 console.log(`Stock value at buying price: ${stockValue} XAF`);
 
+//Profit per unit = selling price - buying price
 function profitPerUnit(product) {
   return product.sell - product.buy;
 }
